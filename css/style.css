@@ -1,0 +1,1219 @@
+/* ========================================
+   基本設定
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #111111;
+    background-color: #FFFFFF;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   ヘッダー
+   ======================================== */
+.header {
+    background-color: #3A3F45;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header .logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+}
+
+/* ========================================
+   ナビゲーションタブ
+   ======================================== */
+.nav-tabs {
+    background-color: #3A3F45;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tab-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-item {
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.tab-item a {
+    display: block;
+    padding: 15px 20px;
+    color: #D0D5D9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab-item:hover a {
+    color: white;
+    background-color: #FFA200;
+}
+
+.tab-item.active {
+    background-color: #FFA200;
+}
+
+.tab-item.active a {
+    color: white;
+}
+
+.tab-item i {
+    margin-right: 8px;
+}
+
+/* ========================================
+   メインコンテンツ
+   ======================================== */
+.main-content {
+    min-height: calc(100vh - 200px);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   共通スタイル
+   ======================================== */
+.page-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0 40px;
+    color: #111111;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.page-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: #FFA200;
+    border-radius: 2px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111111;
+}
+
+/* ========================================
+   ホームページ - ヒーローセクション
+   ======================================== */
+.hero-section {
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://www.genspark.ai/api/files/s/4hnYpP6i');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111111;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.btn-hero:hover {
+    background-color: #FFFFFF;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero i {
+    transition: transform 0.3s ease;
+}
+
+.btn-hero:hover i {
+    transform: translateX(5px);
+}
+
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.placeholder-image i {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+
+/* ========================================
+   ホームページ - 主力製品紹介
+   ======================================== */
+.featured-products-section {
+    background: linear-gradient(to bottom, #FFFFFF 0%, #F3F5F4 100%);
+    padding: 80px 0 100px;
+    margin-bottom: 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #3A3F45;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.featured-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.featured-product-card {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+.featured-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    border-color: #FFA200;
+}
+
+.featured-product-image-wrapper {
+    width: 100%;
+    padding: 40px 40px 20px;
+    background: linear-gradient(135deg, #F3F5F4 0%, #FFFFFF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-product-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3A3F45 0%, #FFA200 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.featured-product-image .placeholder-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.featured-product-image .placeholder-image i {
+    font-size: 4rem;
+    opacity: 0.5;
+    margin-bottom: 0;
+}
+
+.featured-product-body {
+    padding: 30px 40px 40px;
+}
+
+.product-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #FFA200;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.featured-product-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.featured-product-description {
+    color: #3A3F45;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+}
+
+.product-features-list {
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #111111;
+    font-size: 0.9rem;
+}
+
+.feature-item i {
+    color: #FFA200;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.btn-product-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background-color: #FFFFFF;
+    color: #111111;
+    text-decoration: none;
+    border: 2px solid #111111;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    letter-spacing: 0.5px;
+}
+
+.btn-product-detail:hover {
+    background-color: #111111;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(17, 17, 17, 0.2);
+}
+
+.btn-product-detail i {
+    font-size: 1rem;
+}
+
+/* ========================================
+   ホームページ - 我々の取り組み
+   ======================================== */
+.initiatives-section {
+    background-color: #F3F5F4;
+    padding: 50px 0;
+    margin-bottom: 30px;
+}
+
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.initiative-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #D1D5DB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.initiative-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background-color: #3A3F45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.initiative-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #111111;
+}
+
+.initiative-card p {
+    color: #111111;
+    line-height: 1.7;
+}
+
+/* ========================================
+   ホームページ - News（お知らせ）
+   ======================================== */
+.news-section {
+    background-color: #FFFFFF;
+    padding: 60px 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid #D1D5DB;
+}
+
+.news-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #D1D5DB;
+    transition: background-color 0.3s ease;
+}
+
+.news-item:hover {
+    background-color: #F3F5F4;
+}
+
+.news-date {
+    min-width: 120px;
+    color: #111111;
+    font-size: 0.95rem;
+}
+
+.news-category {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: #3A3F45;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 15px;
+}
+
+.news-title {
+    color: #111111;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-title:hover {
+    color: #FFA200;
+}
+
+/* ========================================
+   製品ページ
+   ======================================== */
+#products {
+    background-color: white;
+    padding: 20px 0 60px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #3A3F45 0%, #FFA200 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 30px;
+}
+
+.product-category-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #FFA200;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.product-description {
+    color: #111111;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.product-specs {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #111111;
+    font-size: 0.9rem;
+}
+
+.spec-item i {
+    color: #FFA200;
+    font-size: 0.9rem;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #FFD400;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-download:hover {
+    background-color: #E6BE00;
+}
+
+.btn-download i {
+    margin-right: 8px;
+}
+
+/* ========================================
+   事業紹介ページ
+   ======================================== */
+#business {
+    background-color: white;
+    padding: 20px 0 60px;
+}
+
+.business-list {
+    margin-top: 40px;
+}
+
+.business-item {
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.business-icon {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #3A3F45;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.business-icon i {
+    font-size: 3rem;
+    color: white;
+}
+
+.business-content h3 {
+    font-size: 1.5rem;
+    color: #111111;
+    margin-bottom: 15px;
+}
+
+.business-content p {
+    color: #111111;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.business-features {
+    list-style: none;
+    padding-left: 0;
+}
+
+.business-features li {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    color: #111111;
+}
+
+.business-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #FFA200;
+    font-weight: bold;
+}
+
+/* ========================================
+   会社概要ページ
+   ======================================== */
+#company {
+    background-color: white;
+    padding: 20px 0 60px;
+}
+
+/* Message セクション */
+.message-section {
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.message-header {
+    background: linear-gradient(135deg, #3A3F45 0%, #2d3339 100%);
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.message-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.message-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+.message-content {
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+    align-items: flex-start;
+}
+
+.message-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #3A3F45 0%, #FFA200 100%);
+}
+
+.message-image .placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.message-image .placeholder-image i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.message-text {
+    flex: 1;
+}
+
+.message-text p {
+    color: #111111;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.message-signature {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.signature-title {
+    font-size: 0.9rem;
+    color: #3A3F45;
+    margin-bottom: 5px;
+}
+
+.signature-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.company-info {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.info-table {
+    width: 100%;
+    background-color: white;
+    border-collapse: collapse;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-table th,
+.info-table td {
+    padding: 20px;
+    border: 1px solid #D1D5DB;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #3A3F45;
+    color: white;
+    font-weight: 600;
+    width: 200px;
+}
+
+.info-table td {
+    background-color: #FFFFFF;
+    color: #111111;
+    line-height: 1.7;
+}
+
+/* ========================================
+   お問い合わせページ
+   ======================================== */
+#contact {
+    background-color: white;
+    padding: 20px 0 60px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin: 20px auto 40px;
+    max-width: 800px;
+    color: #111111;
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #111111;
+    font-weight: 600;
+}
+
+.required {
+    color: #FFA200;
+    font-weight: bold;
+}
+
+.optional {
+    color: #111111;
+    font-weight: normal;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #FFA200;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(255, 162, 0, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    padding: 15px 50px;
+    background-color: #FFD400;
+    color: #111111;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #E6BE00;
+}
+
+.btn-submit i {
+    margin-right: 8px;
+}
+
+.contact-note {
+    max-width: 700px;
+    margin: 20px auto 0;
+    text-align: center;
+    color: #111111;
+    opacity: 0.7;
+}
+
+/* ========================================
+   フッター
+   ======================================== */
+.footer {
+    background-color: #3A3F45;
+    color: #D1D5DB;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ========================================
+   レスポンシブデザイン
+   ======================================== */
+@media (max-width: 768px) {
+    .header .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo-image {
+        height: 40px;
+    }
+
+    .tab-list {
+        flex-direction: column;
+    }
+
+    .tab-item {
+        min-width: 100%;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn-hero {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+    }
+
+    .featured-products-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .featured-product-image-wrapper {
+        padding: 30px 30px 15px;
+    }
+
+    .featured-product-body {
+        padding: 25px 30px 35px;
+    }
+
+    .featured-product-name {
+        font-size: 1.4rem;
+    }
+
+    .initiatives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .news-date {
+        min-width: auto;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .business-item {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .business-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .business-icon i {
+        font-size: 2.5rem;
+    }
+
+    .message-content {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+
+    .message-image {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .message-signature {
+        text-align: center;
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .info-table th {
+        border-bottom: none;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-image {
+        height: 35px;
+    }
+
+    .tab-item a {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        margin: 30px 0 25px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-image {
+        height: 400px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+
+    .btn-hero {
+        padding: 12px 28px;
+        font-size: 0.9rem;
+    }
+
+    .featured-products-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .featured-product-image-wrapper {
+        padding: 25px 25px 12px;
+    }
+
+    .featured-product-body {
+        padding: 20px 25px 30px;
+    }
+
+    .featured-product-name {
+        font-size: 1.3rem;
+    }
+
+    .featured-product-description {
+        font-size: 0.9rem;
+    }
+
+    .initiative-card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-icon i {
+        font-size: 2rem;
+    }
+
+    .initiative-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .business-item {
+        padding: 20px;
+    }
+
+    .business-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .business-icon i {
+        font-size: 2rem;
+    }
+
+    .business-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .message-header {
+        padding: 30px 20px;
+    }
+
+    .message-title {
+        font-size: 2rem;
+    }
+
+    .message-content {
+        padding: 30px 20px;
+    }
+
+    .message-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .message-image .placeholder-image i {
+        font-size: 3rem;
+    }
+
+    .message-text p {
+        font-size: 0.9rem;
+    }
+
+    .signature-name {
+        font-size: 1.1rem;
+    }
+
+    .product-info {
+        padding: 20px;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+}
