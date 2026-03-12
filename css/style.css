@@ -171,7 +171,7 @@ body {
     height: 650px;
     position: relative;
     overflow: hidden;
-    background-image: url('https://www.genspark.ai/api/files/s/4hnYpP6i');
+    background-image: url('../images/hero-image.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -629,6 +629,134 @@ body {
 }
 
 /* ========================================
+   製品ページ - 詳細レイアウト（縦並び）
+   ======================================== */
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.product-detail {
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.product-detail-header {
+    padding: 30px 40px 20px;
+    border-bottom: 3px solid #FFA200;
+}
+
+.product-detail-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-top: 10px;
+}
+
+.product-detail-body {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    padding: 40px;
+}
+
+.product-detail-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-main-image {
+    width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border: 1px solid #D1D5DB;
+}
+
+.product-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.product-description-section h4,
+.product-features-section h4,
+.product-specs-section h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFA200;
+}
+
+.product-description-section p {
+    color: #3A3F45;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.product-detail-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-detail-features li {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.product-detail-features li i {
+    color: #FFA200;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.product-detail-features li span {
+    color: #111111;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.product-download-section {
+    margin-top: 10px;
+}
+
+.btn-product-download {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #FFD400;
+    color: #111111;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #FFD400;
+}
+
+.btn-product-download:hover {
+    background-color: #E6BE00;
+    border-color: #E6BE00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 212, 0, 0.3);
+}
+
+.btn-product-download i {
+    margin-right: 10px;
+}
+
+/* ========================================
    事業紹介ページ
    ======================================== */
 #business {
@@ -679,6 +807,20 @@ body {
     margin-bottom: 15px;
 }
 
+.business-philosophy {
+    font-weight: 600;
+    color: #1F2A37;
+    border-left: 4px solid #FFA200;
+    padding-left: 20px;
+    margin-top: 20px;
+    line-height: 1.9;
+}
+
+.business-content strong {
+    font-weight: 700;
+    color: #1F2A37;
+}
+
 .business-features {
     list-style: none;
     padding-left: 0;
@@ -706,96 +848,52 @@ body {
     padding: 20px 0 60px;
 }
 
-/* Message セクション */
-.message-section {
-    max-width: 1000px;
-    margin: 0 auto 80px;
+/* 会社理念セクション */
+.company-philosophy {
+    max-width: 900px;
+    margin: 0 auto 60px;
     background-color: #FFFFFF;
+    border: 1px solid #D1D5DB;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid #D1D5DB;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.message-header {
-    background: linear-gradient(135deg, #3A3F45 0%, #2d3339 100%);
-    padding: 40px;
-    text-align: center;
-    color: white;
-}
-
-.message-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: 2px;
-}
-
-.message-subtitle {
-    font-size: 1rem;
-    opacity: 0.9;
-    font-weight: 400;
-}
-
-.message-content {
-    display: flex;
-    gap: 50px;
+.philosophy-content {
     padding: 50px;
-    align-items: flex-start;
 }
 
-.message-image {
-    flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #3A3F45 0%, #FFA200 100%);
-}
-
-.message-image .placeholder-image {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.9rem;
-}
-
-.message-image .placeholder-image i {
-    font-size: 4rem;
-    margin-bottom: 10px;
-    opacity: 0.7;
-}
-
-.message-text {
-    flex: 1;
-}
-
-.message-text p {
+.philosophy-content p {
     color: #111111;
     line-height: 1.9;
-    margin-bottom: 20px;
-    font-size: 1rem;
+    margin-bottom: 25px;
+    font-size: 1.05rem;
 }
 
-.message-signature {
-    margin-top: 40px;
-    text-align: right;
+.philosophy-content p:last-child {
+    margin-bottom: 0;
 }
 
-.signature-title {
-    font-size: 0.9rem;
-    color: #3A3F45;
-    margin-bottom: 5px;
-}
-
-.signature-name {
-    font-size: 1.3rem;
+.philosophy-content strong {
     font-weight: 700;
-    color: #111111;
+    color: #FFA200;
+    font-size: 1.15em;
+}
+
+.philosophy-mission {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px solid #FFA200;
+}
+
+.philosophy-mission p {
+    font-weight: 500;
+}
+
+.philosophy-mission p:first-child {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1F2A37;
 }
 
 .company-info {
@@ -948,6 +1046,114 @@ body {
 }
 
 /* ========================================
+   ニュース詳細モーダル
+   ======================================== */
+.news-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+}
+
+.news-modal-content {
+    background-color: #FFFFFF;
+    margin: 50px auto;
+    padding: 0;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.news-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #3A3F45;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.news-modal-close:hover {
+    background-color: #F3F5F4;
+    color: #111111;
+}
+
+.news-article {
+    padding: 50px 60px;
+}
+
+.news-article-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.news-article-date {
+    color: #3A3F45;
+    font-size: 0.95rem;
+}
+
+.news-article-category {
+    display: inline-block;
+    padding: 4px 12px;
+    background-color: #3A3F45;
+    color: white;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.news-article-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    border-bottom: 3px solid #FFA200;
+    padding-bottom: 15px;
+}
+
+.news-article-content {
+    color: #111111;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.news-article-content p {
+    margin-bottom: 20px;
+}
+
+.news-article-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========================================
    レスポンシブデザイン
    ======================================== */
 @media (max-width: 768px) {
@@ -1031,6 +1237,35 @@ body {
         height: 200px;
     }
 
+    /* 製品詳細ページのレスポンシブ */
+    .product-detail-body {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .product-detail-header {
+        padding: 25px 20px 15px;
+    }
+
+    .product-detail-name {
+        font-size: 1.6rem;
+    }
+
+    .product-main-image {
+        height: 300px;
+    }
+
+    .product-description-section h4,
+    .product-features-section h4 {
+        font-size: 1.1rem;
+    }
+
+    .btn-product-download {
+        width: 100%;
+        text-align: center;
+    }
+
     .business-item {
         flex-direction: column;
         padding: 25px;
@@ -1045,20 +1280,20 @@ body {
         font-size: 2.5rem;
     }
 
-    .message-content {
-        flex-direction: column;
+    .company-philosophy {
+        margin-bottom: 40px;
+    }
+
+    .philosophy-content {
         padding: 40px 30px;
-        gap: 30px;
     }
 
-    .message-image {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
+    .philosophy-content p {
+        font-size: 1rem;
     }
 
-    .message-signature {
-        text-align: center;
+    .philosophy-mission p:first-child {
+        font-size: 1.1rem;
     }
 
     .info-table th,
@@ -1078,6 +1313,23 @@ body {
 
     .btn-submit {
         width: 100%;
+    }
+
+    .news-modal-content {
+        margin: 20px;
+        max-width: calc(100% - 40px);
+    }
+
+    .news-article {
+        padding: 40px 30px;
+    }
+
+    .news-article-title {
+        font-size: 1.5rem;
+    }
+
+    .news-article-content {
+        font-size: 1rem;
     }
 }
 
@@ -1180,33 +1432,25 @@ body {
         font-size: 1.2rem;
     }
 
-    .message-header {
+    .company-philosophy {
+        margin-bottom: 30px;
+    }
+
+    .philosophy-content {
         padding: 30px 20px;
     }
 
-    .message-title {
-        font-size: 2rem;
+    .philosophy-content p {
+        font-size: 0.95rem;
     }
 
-    .message-content {
-        padding: 30px 20px;
+    .philosophy-mission {
+        margin-top: 30px;
+        padding-top: 25px;
     }
 
-    .message-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .message-image .placeholder-image i {
-        font-size: 3rem;
-    }
-
-    .message-text p {
-        font-size: 0.9rem;
-    }
-
-    .signature-name {
-        font-size: 1.1rem;
+    .philosophy-mission p:first-child {
+        font-size: 1.05rem;
     }
 
     .product-info {
@@ -1215,5 +1459,62 @@ body {
 
     .product-name {
         font-size: 1.2rem;
+    }
+
+    /* 製品詳細ページ - スマホ */
+    .product-detail-body {
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .product-detail-header {
+        padding: 20px 15px 12px;
+    }
+
+    .product-detail-name {
+        font-size: 1.4rem;
+    }
+
+    .product-main-image {
+        height: 250px;
+    }
+
+    .product-detail-features li {
+        gap: 10px;
+    }
+
+    .product-detail-features li i {
+        font-size: 1rem;
+    }
+
+    .product-detail-features li span {
+        font-size: 0.9rem;
+    }
+
+    .btn-product-download {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .news-article {
+        padding: 30px 20px;
+    }
+
+    .news-article-title {
+        font-size: 1.3rem;
+    }
+
+    .news-article-content {
+        font-size: 0.95rem;
+    }
+
+    .news-modal-close {
+        right: 15px;
+        top: 15px;
+        font-size: 28px;
+        width: 35px;
+        height: 35px;
     }
 }
