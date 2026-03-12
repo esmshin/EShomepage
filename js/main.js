@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================
 const newsArticles = {
     'fukushima-bear': {
-        date: '2024.12.00',
+        date: '2025.09.01',
         category: 'プレスリリース',
         title: '福島市でのクマ対策の取り組みが複数のメディアで紹介されました',
         content: `

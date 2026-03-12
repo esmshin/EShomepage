@@ -928,6 +928,23 @@ body {
     line-height: 1.7;
 }
 
+.info-table td a {
+    color: #FFA200;
+    text-decoration: none;
+}
+
+.info-table td a:hover {
+    text-decoration: underline;
+}
+
+/* 検索エンジン対策：代表者名の保護 */
+[data-nosnippet] {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
 /* ========================================
    お問い合わせページ
    ======================================== */
