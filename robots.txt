@@ -1,0 +1,4 @@
+# robots.txt - 検索エンジンのクローリングを防止
+
+User-agent: *
+Disallow: /
