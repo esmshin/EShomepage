@@ -52,6 +52,76 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ========================================
+// ニュース記事詳細表示機能
+// ========================================
+const newsArticles = {
+    'fukushima-bear': {
+        date: '2024.12.00',
+        category: 'プレスリリース',
+        title: '福島市でのクマ対策の取り組みが複数のメディアで紹介されました',
+        content: `
+            <p>当社が取り組んでいる野生動物対策の活動について、福島市でのクマ対策の事例が複数のメディアにて紹介されました。</p>
+            
+            <p>近年、気候変動や山間地域の環境変化の影響などにより、クマをはじめとする野生動物の人里への出没が全国的に増加しています。福島市においてもクマの出没件数は増加傾向にあり、住民の安全確保が重要な課題となっています。</p>
+            
+            <p>このような状況に対し、自治体による対策の一つとして、音によって野生動物の接近を抑制する装置が活用されています。本取り組みでは、野生動物が嫌がる音を用いた装置により住宅地への接近を抑制することで、被害の未然防止を図る試みが行われています。</p>
+            
+            <p>また、福島市では状況に応じて緊急銃猟制度を活用するなど、住民の安全を守るための多面的な対策が進められています。今回の報道では、こうした対策の一環として音響装置を活用した取り組みが紹介されました。</p>
+            
+            <p>当社では今後も、人と野生動物が共存できる社会の実現を目指し、音響技術を活用した野生動物対策の研究・開発および社会実装を進めてまいります。</p>
+        `
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('newsModal');
+    const modalBody = document.getElementById('newsModalBody');
+    const closeBtn = document.querySelector('.news-modal-close');
+    
+    // ニュースタイトルクリック時
+    document.querySelectorAll('.news-title').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const newsId = this.getAttribute('data-news-id');
+            
+            if (newsId && newsArticles[newsId]) {
+                const article = newsArticles[newsId];
+                modalBody.innerHTML = `
+                    <div class="news-article">
+                        <div class="news-article-header">
+                            <span class="news-article-date">${article.date}</span>
+                            <span class="news-article-category">${article.category}</span>
+                        </div>
+                        <h2 class="news-article-title">${article.title}</h2>
+                        <div class="news-article-content">
+                            ${article.content}
+                        </div>
+                    </div>
+                `;
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+    
+    // 閉じるボタン
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+    }
+    
+    // モーダル外クリックで閉じる
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
+
+// ========================================
 // お問い合わせフォームの処理
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {

@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="https://www.genspark.ai/api/files/s/kcDkMvfs" alt="ES Symphony Logo" class="logo-image">
+                <img src="images/logo.png" alt="ES Symphony Logo" class="logo-image">
                 <h1>株式会社ESシンフォニー</h1>
             </div>
         </div>
@@ -66,19 +66,9 @@
                     <h2 class="section-title">News</h2>
                     <div class="news-list">
                         <div class="news-item">
-                            <span class="news-date">2024.00.00</span>
+                            <span class="news-date">2024.12.00</span>
                             <span class="news-category">プレスリリース</span>
-                            <a href="#" class="news-title">【お知らせタイトルをここに挿入】</a>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">2024.00.00</span>
-                            <span class="news-category">お知らせ</span>
-                            <a href="#" class="news-title">【お知らせタイトルをここに挿入】</a>
-                        </div>
-                        <div class="news-item">
-                            <span class="news-date">2024.00.00</span>
-                            <span class="news-category">プレスリリース</span>
-                            <a href="#" class="news-title">【お知らせタイトルをここに挿入】</a>
+                            <a href="#" class="news-title" data-news-id="fukushima-bear">福島市でのクマ対策の取り組みが複数のメディアで紹介されました</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +84,7 @@
                     <div class="featured-products-grid">
                         <div class="featured-product-card">
                             <div class="featured-product-image-wrapper">
-                                <div class="featured-product-image" style="background-image: url('https://www.genspark.ai/api/files/s/H9TAVZur'); background-size: cover; background-position: center;">
+                                <div class="featured-product-image" style="background-image: url('images/onari-one-field.jpg'); background-size: cover; background-position: center;">
                                 </div>
                             </div>
                             <div class="featured-product-body">
@@ -116,7 +106,7 @@
                         </div>
                         <div class="featured-product-card">
                             <div class="featured-product-image-wrapper">
-                                <div class="featured-product-image" style="background-image: url('https://www.genspark.ai/api/files/s/jP6ABSWC'); background-size: cover; background-position: center;">
+                                <div class="featured-product-image" style="background-image: url('images/onari-one-portable.jpg'); background-size: cover; background-position: center;">
                                 </div>
                             </div>
                             <div class="featured-product-body">
@@ -175,49 +165,80 @@
         <section id="products" class="tab-content">
             <div class="container">
                 <h2 class="page-title">製品紹介</h2>
-                <div class="products-grid">
-                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://www.genspark.ai/api/files/s/H9TAVZur'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="product-info">
+                <div class="products-list">
+                    <!-- 製品1: Onari One Field -->
+                    <div class="product-detail">
+                        <div class="product-detail-header">
                             <span class="product-category-tag">WILDLIFE CONTROL</span>
-                            <h3 class="product-name">Onari One Field</h3>
-                            <p class="product-description">センサーで動物を検知し強力かつ特殊な音を発生させることで動物の侵入を防ぎます。クマやシカといった中型〜大型の動物に対しての忌避効果を確認しております。これまで、地方自治体と協力したプロジェクトでクマの行動変容を確認し、成果を実感していただいております。</p>
-                            <div class="product-specs">
-                                <div class="spec-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>センサー稼働式大音量モデル</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>フィールド条件に対し柔軟に対応</span>
+                            <h3 class="product-detail-name">Onari One Field</h3>
+                        </div>
+                        <div class="product-detail-body">
+                            <div class="product-detail-images">
+                                <div class="product-main-image" style="background-image: url('images/onari-one-field.jpg'); background-size: cover; background-position: center;">
                                 </div>
                             </div>
-                            <a href="pdfs/onari-one-field-brochure.pdf" class="btn-download" target="_blank">
-                                <i class="fas fa-file-pdf"></i> パンフレットダウンロード (PDF)
-                            </a>
+                            <div class="product-detail-content">
+                                <div class="product-description-section">
+                                    <h4>製品概要</h4>
+                                    <p>センサーで動物を検知し強力かつ特殊な音を発生させることで動物の侵入を防ぎます。クマやシカといった中型〜大型の動物に対しての忌避効果を確認しております。これまで、地方自治体と協力したプロジェクトでクマの行動変容を確認し、成果を実感していただいております。</p>
+                                </div>
+                                <div class="product-features-section">
+                                    <h4>主な特徴</h4>
+                                    <ul class="product-detail-features">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>センサー稼働式大音量モデル</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>フィールド条件に対し柔軟に対応</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-download-section">
+                                    <a href="pdfs/onari-one-field-brochure.pdf" class="btn-product-download" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> 製品パンフレットをダウンロード
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div class="product-image" style="background-image: url('https://www.genspark.ai/api/files/s/jP6ABSWC'); background-size: cover; background-position: center;">
-                        </div>
-                        <div class="product-info">
+
+                    <!-- 製品2: Onari One Portable -->
+                    <div class="product-detail">
+                        <div class="product-detail-header">
                             <span class="product-category-tag">PORTABLE DEVICE</span>
-                            <h3 class="product-name">Onari One Portable</h3>
-                            <p class="product-description">Onari Oneの音響装置をそのまま可搬型にしました。クマ鈴やクマスプレーといった従来の忌避手段とは一線を画す、遠くへ強く動物接触の可能性を減らす手段となります。例えば、山間作業時に携帯し、作業前に鳴らして動物を寄せ付けないエリアを作る、もしもの時に備えるなど、作業者の安心・安全を目指した装置です。</p>
-                            <div class="product-specs">
-                                <div class="spec-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>電池式可搬型音響装置</span>
-                                </div>
-                                <div class="spec-item">
-                                    <i class="fas fa-check"></i>
-                                    <span>100m先まで音を届けます</span>
+                            <h3 class="product-detail-name">Onari One Portable</h3>
+                        </div>
+                        <div class="product-detail-body">
+                            <div class="product-detail-images">
+                                <div class="product-main-image" style="background-image: url('images/onari-one-portable.jpg'); background-size: cover; background-position: center;">
                                 </div>
                             </div>
-                            <a href="pdfs/onari-one-portable-brochure.pdf" class="btn-download" target="_blank">
-                                <i class="fas fa-file-pdf"></i> パンフレットダウンロード (PDF)
-                            </a>
+                            <div class="product-detail-content">
+                                <div class="product-description-section">
+                                    <h4>製品概要</h4>
+                                    <p>Onari Oneの音響装置をそのまま可搬型にしました。クマ鈴やクマスプレーといった従来の忌避手段とは一線を画す、遠くへ強く動物接触の可能性を減らす手段となります。例えば、山間作業時に携帯し、作業前に鳴らして動物を寄せ付けないエリアを作る、もしもの時に備えるなど、作業者の安心・安全を目指した装置です。</p>
+                                </div>
+                                <div class="product-features-section">
+                                    <h4>主な特徴</h4>
+                                    <ul class="product-detail-features">
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>電池式可搬型音響装置</span>
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>100m先まで音を届けます</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-download-section">
+                                    <a href="pdfs/onari-one-portable-brochure.pdf" class="btn-product-download" target="_blank">
+                                        <i class="fas fa-file-pdf"></i> 製品パンフレットをダウンロード
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,12 +256,10 @@
                         </div>
                         <div class="business-content">
                             <h3>音響による野生動物被害対策事業</h3>
-                            <p>【事業内容の説明をここに挿入】</p>
-                            <ul class="business-features">
-                                <li>【特徴1】</li>
-                                <li>【特徴2】</li>
-                                <li>【特徴3】</li>
-                            </ul>
+                            <p>近年、気候変動や山間地域の開発などにより、私たちを取り巻く自然環境の状況は大きく変化しています。その結果、これまで人が出会うことのなかったクマやシカなどの野生動物と人間が接触する機会が増え、事故や被害が各地で報告されています。</p>
+                            <p>専門家からも、かつては人里離れた山中にしか現れなかった動物が、人家に近い裏山などに出没する状況が増えているという指摘がなされています。</p>
+                            <p>私たちはこの課題に対し、音によって野生動物の接近を抑制する装置を開発しています。住宅地への侵入防止や、山間地域で作業を行う方々の安全性向上を目的とした音響装置の提供を行っています。</p>
+                            <p class="business-philosophy">「人も守り、動物も守る。」<br>そのような共存可能な未来の実現を目指し、事業を展開しています。</p>
                         </div>
                     </div>
                     <div class="business-item">
@@ -249,12 +268,9 @@
                         </div>
                         <div class="business-content">
                             <h3>工場内の機器監視事業</h3>
-                            <p>【事業内容の説明をここに挿入】</p>
-                            <ul class="business-features">
-                                <li>【特徴1】</li>
-                                <li>【特徴2】</li>
-                                <li>【特徴3】</li>
-                            </ul>
+                            <p>食品工場などでは、食の安全を守るために様々な機器が導入されています。しかし、それらの機器の中には、外見だけでは故障や劣化を判断することが難しいものや、人の耳には聞こえない音を発生させながら稼働する機械も存在します。</p>
+                            <p>私たちは、こうした目視では状態が把握しにくい機器を対象に、センシング技術と通信技術を組み合わせた監視装置の導入を推進しています。</p>
+                            <p>機器の状態を日々継続的に監視することで、トラブルの早期発見や安定稼働を支援し、<strong>「お客様に安心して機器をご使用いただける環境づくり」</strong>のお手伝いをしています。</p>
                         </div>
                     </div>
                     <div class="business-item">
@@ -263,12 +279,9 @@
                         </div>
                         <div class="business-content">
                             <h3>受託開発</h3>
-                            <p>【事業内容の説明をここに挿入】</p>
-                            <ul class="business-features">
-                                <li>【特徴1】</li>
-                                <li>【特徴2】</li>
-                                <li>【特徴3】</li>
-                            </ul>
+                            <p>当社のコア技術は、音響装置や通信技術に加え、画像センシングなどの環境モニタリング技術にも広がっています。</p>
+                            <p>お客様のご要望に合わせ、センシング装置、通信システム、環境監視システムなどの開発を受託しています。</p>
+                            <p>現場の課題を丁寧に伺いながら、用途や環境に適したシステムの設計・試作・開発を行い、実用的なソリューションの提供を目指しています。</p>
                         </div>
                     </div>
                 </div>
@@ -279,27 +292,18 @@
         <section id="company" class="tab-content">
             <div class="container">
                 <h2 class="page-title">会社概要</h2>
-                
-                <!-- Message セクション -->
-                <div class="message-section">
-                    <div class="message-header">
-                        <h3 class="message-title">Message</h3>
-                        <p class="message-subtitle">代表挨拶</p>
-                    </div>
-                    <div class="message-content">
-                        <div class="message-image">
-                            <div class="placeholder-image">
-                                <i class="fas fa-user-tie"></i>
-                                <p>代表者写真</p>
-                            </div>
-                        </div>
-                        <div class="message-text">
-                            <p>【代表者からのメッセージをここに挿入します。会社の理念、ビジョン、お客様への想いなどを記載してください。】</p>
-                            <p>【2段落目のテキスト。技術への取り組みや、社会への貢献について述べることができます。】</p>
-                            <div class="message-signature">
-                                <p class="signature-title">代表取締役</p>
-                                <p class="signature-name">【代表者名】</p>
-                            </div>
+
+                <!-- 会社理念 -->
+                <div class="company-philosophy">
+                    <div class="philosophy-content">
+                        <p>ESシンフォニーの「<strong>E</strong>」には、Earth（地球）、Ecology（生態）、Engineering（工学）、Education（教育）など、私たちが大切にするさまざまな価値が込められています。そして「<strong>S</strong>」は、Science（科学）、Sound（音）、Sensing（センシング）など、それらを実現するための技術と知の領域を表しています。</p>
+                        
+                        <p>これらの「E」と「S」が互いに響き合い、協調し、調和することで、社会に新しい価値を生み出す――その思いを込めて、私たちは「シンフォニー」という名前を掲げました。</p>
+                        
+                        <div class="philosophy-mission">
+                            <p>私たちが目指すのは、人と自然環境の境界を再デザインすることです。</p>
+                            <p>人が自然を排除するのではなく、また自然が人の生活を脅かすのでもない。技術の力によってその関係を調和させ、人と自然がともに豊かになる社会を実現したいと考えています。</p>
+                            <p>ESシンフォニーは、音響技術、センシング技術、通信技術などを活用し、人と自然、人と環境の新しい関係を社会に実装していきます。</p>
                         </div>
                     </div>
                 </div>
@@ -402,6 +406,14 @@
             <p>&copy; 2024 株式会社ESシンフォニー All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- ニュース詳細モーダル -->
+    <div id="newsModal" class="news-modal">
+        <div class="news-modal-content">
+            <span class="news-modal-close">&times;</span>
+            <div id="newsModalBody"></div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
