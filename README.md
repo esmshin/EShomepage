@@ -64,6 +64,7 @@
 ```
 /
 ├── index.html                          # メインHTMLファイル
+├── CNAME                               # カスタムドメイン設定（www.es-symphony.co.jp）
 ├── robots.txt                          # 検索エンジンクローリング防止
 ├── css/
 │   └── style.css                      # スタイルシート
@@ -174,6 +175,43 @@
    - 遅延読み込み（lazy loading）の実装
 
 ## デプロイ方法
+
+### 🌐 カスタムドメインで公開（GitHub Pages）
+
+**ドメイン**: `www.es-symphony.co.jp`
+
+#### ステップ1: ファイルをGitHubリポジトリにプッシュ
+
+全てのファイルをGitHubリポジトリにアップロードしてください：
+- ✅ `CNAME` ファイル（**重要**: www.es-symphony.co.jp と記載済み）
+- ✅ `index.html`
+- ✅ `robots.txt`
+- ✅ `css/`, `js/`, `images/`, `pdfs/` フォルダ
+
+#### ステップ2: GitHub Pagesを有効化
+
+1. リポジトリの「Settings」→「Pages」
+2. Source: `main` ブランチ、`/ (root)` フォルダ
+3. Custom domain: `www.es-symphony.co.jp` を入力
+4. 「Enforce HTTPS」にチェック（DNS設定後に有効化）
+
+#### ステップ3: お名前.comでDNS設定
+
+**既に設定済みの場合はスキップしてください。**
+
+詳細は `GITHUB_PAGES_DOMAIN_SETUP.md` を参照。
+
+**必要な設定：**
+- CNAMEレコード: `www` → `あなたのGitHubユーザー名.github.io`
+- Aレコード（オプション）: `@` → GitHub PagesのIPアドレス（4つ）
+
+#### ステップ4: 反映を待つ
+
+- DNS反映: 24〜72時間
+- SSL証明書自動発行: 24時間以内
+- 完了後、`https://www.es-symphony.co.jp` でアクセス可能
+
+---
 
 ### オプション1：Publishタブからデプロイ（推奨）
 
