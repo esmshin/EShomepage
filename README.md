@@ -64,6 +64,7 @@
 ```
 /
 ├── index.html                          # メインHTMLファイル
+├── CNAME                               # カスタムドメイン設定（www.es-symphony.co.jp）
 ├── robots.txt                          # 検索エンジンクローリング防止
 ├── css/
 │   └── style.css                      # スタイルシート
@@ -104,9 +105,42 @@
    - 追加のニュース記事（js/main.jsに追加可能）
 
 2. **製品ページ**
-   - 製品のサブ画像
+   - 製品のサブ画像（追加写真2枚分のプレースホルダーあり）
+   - 製品仕様の詳細データ（電源、音圧レベル、検知範囲など）
+   - 製品の特徴の詳細説明文
 
-### ✅ 設定済み
+3. **会社概要ページ**
+   - 代表者名
+   - 設立年月日
+   - 資本金
+   - 郵便番号・住所
+   - 電話番号・FAX番号
+   - メールアドレス
+   （※現在はプレースホルダー表示）
+
+4. **お問い合わせフォーム**
+   - Formspreeの設定（YOUR_FORM_IDを実際のIDに置き換える必要があります）
+
+### 🔧 Formspree設定方法
+
+お問い合わせフォームでメールを受信するには：
+
+**詳細な設定手順は `FORMSPREE_SETUP.md` をご覧ください。**
+
+**簡易手順：**
+
+1. [Formspree](https://formspree.io/) にアクセスしてアカウント作成
+2. 新しいフォームを作成し、受信用メールアドレス `info@es-symphony.co.jp` を設定
+3. 取得したフォームID（例：xbjqnndp）を確認
+4. `index.html` の364行目を編集：
+   ```html
+   <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   ```
+   `YOUR_FORM_ID` を実際のIDに置き換える
+
+**料金:** 月50件まで無料（Freeプラン）
+
+## 推奨される次のステップ
 
 - **お問い合わせフォーム**: Formspree設定済み（meerkqao）
 - **会社概要**: すべて入力済み
@@ -130,13 +164,44 @@
 
 ## デプロイ方法
 
-### Publishタブからデプロイ（推奨）
+### 🌐 カスタムドメインで公開（GitHub Pages）
 
-**Publishタブからワンクリックでデプロイ可能です**
+**ドメイン**: `www.es-symphony.co.jp`
 
-Publishタブに移動して「公開」ボタンをクリックすると、自動的にサイトがデプロイされ、公開URLが発行されます。
+#### ステップ1: ファイルをGitHubリポジトリにプッシュ
 
-### 全ファイルをダウンロードして外部サービスにデプロイ
+全てのファイルをGitHubリポジトリにアップロードしてください：
+- ✅ `CNAME` ファイル（**重要**: www.es-symphony.co.jp と記載済み）
+- ✅ `index.html`
+- ✅ `robots.txt`
+- ✅ `css/`, `js/`, `images/`, `pdfs/` フォルダ
+
+#### ステップ2: GitHub Pagesを有効化
+
+1. リポジトリの「Settings」→「Pages」
+2. Source: `main` ブランチ、`/ (root)` フォルダ
+3. Custom domain: `www.es-symphony.co.jp` を入力
+4. 「Enforce HTTPS」にチェック（DNS設定後に有効化）
+
+#### ステップ3: お名前.comでDNS設定
+
+**既に設定済みの場合はスキップしてください。**
+
+詳細は `GITHUB_PAGES_DOMAIN_SETUP.md` を参照。
+
+**必要な設定：**
+- CNAMEレコード: `www` → `あなたのGitHubユーザー名.github.io`
+- Aレコード（オプション）: `@` → GitHub PagesのIPアドレス（4つ）
+
+#### ステップ4: 反映を待つ
+
+- DNS反映: 24〜72時間
+- SSL証明書自動発行: 24時間以内
+- 完了後、`https://www.es-symphony.co.jp` でアクセス可能
+
+---
+
+### オプション1：Publishタブからデプロイ（推奨）
 
 **Publishタブからワンクリックでデプロイ可能です**
 
