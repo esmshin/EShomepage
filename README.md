@@ -127,14 +127,20 @@
 
 お問い合わせフォームでメールを受信するには：
 
+**詳細な設定手順は `FORMSPREE_SETUP.md` をご覧ください。**
+
+**簡易手順：**
+
 1. [Formspree](https://formspree.io/) にアクセスしてアカウント作成
-2. 新しいフォームを作成し、受信用のGmailアドレスを設定
+2. 新しいフォームを作成し、受信用メールアドレス `info@es-symphony.co.jp` を設定
 3. 取得したフォームID（例：xbjqnndp）を確認
-4. `index.html` の313行目を編集：
+4. `index.html` の364行目を編集：
    ```html
    <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
    ```
    `YOUR_FORM_ID` を実際のIDに置き換える
+
+**料金:** 月50件まで無料（Freeプラン）
 
 ## 推奨される次のステップ
 
